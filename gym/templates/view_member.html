@@ -1,0 +1,47 @@
+{%extends 'navigationbar.html' %}
+
+{% block body %}
+
+ 
+
+
+<div class="container" style="margin-top: 60px;">
+<h2 class="text-center text-primary font-weight-bold">View Member</h2>
+<br>
+</div>
+<table id="example" class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Contact</th>
+			<th>EmailID</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Plan</th>
+			<th>Join Date</th>
+			<th>Expire Date</th>
+			<th>Intial Amount</th>
+			<th>Remaining Amount</th>
+			<th>Remove</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in member %}
+		<tr>
+			<td>{{i.name}}</td>
+			<td>{{i.contact}}</td>
+			<td>{{i.emailid}}</td>
+			<td>{{i.age}}</td>
+			<td>{{i.gender}}</td>
+			<td>{{i.plan}}</td>
+			<td>{{i.join}}</td>
+			<td>{{i.expire}}</td>
+			<td>{{i.initial }}</td>
+			<td>{{i.remaining }}</td>
+			<td><a class ="btn btn-danger" href="{% url 'delete_member' i.id %}" onclick="return confirm(Are you sure?)">Delete</a></td>
+		
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{%endblock %}

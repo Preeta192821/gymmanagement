@@ -1,0 +1,74 @@
+
+{%extends 'navigationbar.html' %}
+
+{% block body%}
+{% load static%}
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+<body>
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="{%static 'images/unnamed.jpg' %}" alt="" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{%static 'images/own gym.jpg'%}" class="w3-round w3-image w3-opacity-min" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Our Own Gym</h1><br>
+      <h5 class="w3-center">Tradition since 2000</h5>
+      <p class="w3-large">Gym and Fitness was founded in 2002 as a family owned and operated business. The Gym and Fitness founders didn’t want it to be just another gym equipment retailer - they wanted to be the best in the industry and set their minds to doing so! Since its birth, Gym and Fitness has grown into one of Australia’s largest online fitness equipment retailers having helped over 50,000 customers live longer, happier and healthier lives <span class="w3-tag w3-light-grey">WHAT WE DO</span></p>
+      <p class="w3-large w3-text-grey w3-hide-medium">We want to help you live a fit and healthy lifestyle! We do this by helping you find the most suitable equipment for your home gym, studio or commercial gym, keeping your budget, lifestyle and fitness goals in mind. We stock a wide range of gym equipment, with strength equipment, cardio, cross training and so much more. Our awesome team is always keen to help, so please call us to discuss your needs.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Our Plan</h1><br>
+      <h4>Platinum</h4>
+      <p class="w3-text-grey">for 6 months</p><br>
+    
+      <h4>Gold</h4>
+      <p class="w3-text-grey">for 4 months</p><br>
+    
+      <h4>Silver</h4>
+      <p class="w3-text-grey">for 3 months</p><br>
+    
+      <h4>Regular</h4>
+      <p class="w3-text-grey">for 2 months</p><br>
+   
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="{%static 'images/g.png'%}" class="w3-round w3-image w3-opacity-min"  style="width:100% height:100%">
+    </div>
+  </div>
+
+  <hr>
+
+ 
+  
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="{% url 'contact' %}" title="OWN GYM" target="_blank" class="w3-hover-text-green">OWN GYM</a></p>
+</footer>
+
+</body>
+{%endblock%}
