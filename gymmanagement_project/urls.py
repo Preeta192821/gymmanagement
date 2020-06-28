@@ -53,4 +53,7 @@ urlpatterns = [
     path('delete_member/<int:pid>',Delete_Member, name='delete_member'),
 
 
+    path('signup',SignUp, name='signup'),
+
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
